@@ -1,0 +1,24 @@
+<h1>Games#new</h1>
+  <p>Find me in app/views/games/new.html.erb</p>
+
+<h4>Welcome to Countdown</h4>
+  <p>Please find your letter pool below;</p>
+
+<p>enter a word using as many letters as possible.</p>
+  <br> <br> <br>
+
+<div class="countdownGame">
+  <%= @letters %>
+    <br> <br> <br>
+</div>
+
+<p>put attempt somewhere in this form?</p>
+
+#hidden field tags need to be fixed.... see documentation
+
+<form action="/score" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input type="text" name="word" placeholder="enter a word from the letters above">
+        <input type="submit" placeholder="enter a word from the letters above">
+</form>
+
